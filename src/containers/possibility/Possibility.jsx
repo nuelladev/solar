@@ -1,5 +1,5 @@
 import React from 'react';
-import possibilityImage from '../../assets/possibility.png';
+import possibilityImage from '../../assets/image6.jpg';
 import './possibility.css';
 
 const Possibility = () => (
@@ -8,10 +8,14 @@ const Possibility = () => (
       <img src={possibilityImage} alt="possibility" />
     </div>
     <div className="gpt3__possibility-content">
-      <h4>Request Early Access to Get Started</h4>
-      <h1 className="gradient__text">The possibilities are <br /> beyond your imagination</h1>
-      <p>Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>
-      <h4>Request Early Access to Get Started</h4>
+      <h4>Get Started Today</h4>
+      <h1 className="gradient__text">Transform Your Future with Sustainable Energy Solutions</h1>
+      <p style={{ color: 'white' }}>
+        At Green Watt Energy, we believe in the power of innovation to create lasting change.
+        With our cutting-edge renewable energy systems, you can reduce costs, minimize your environmental impact,
+        and enjoy a more sustainable and efficient future. Let us help you turn possibilities into reality.
+      </p>
+      <h4>Request a Quote or book a consultation to start your journey</h4>
     </div>
   </div>
 );

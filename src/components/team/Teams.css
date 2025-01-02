@@ -1,0 +1,92 @@
+/* Main Section Styling */
+.teams__section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: inherit; /* Keeps the current background color */
+}
+
+/* Global Container for Consistent Alignment */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem; /* Consistent padding on left and right */
+}
+
+/* Header Styling */
+.teams__header {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ff4820; /* Updated text color */
+  line-height: 1.4; /* Adjust line height for better readability */
+  word-break: break-word; /* Ensures long words wrap properly */
+}
+
+/* Grid Layout for Team Members */
+.teams__container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Five items per row */
+  gap: 1.5rem; /* Space between grid items */
+}
+
+/* Individual Team Member Card */
+.team__member {
+  text-align: center;
+  background-color: #013f2a; /* Theme background */
+  padding: 1rem;
+  border-radius: 15px; /* Curved corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.team__member:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Team Member Image Styling */
+.team__image {
+  width: 100%;
+  height: 250px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures the image fits the container */
+  border-radius: 15px; /* Matches card's curve */
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease;
+}
+
+/* Team Member Name */
+.team__member h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+/* Team Member Details */
+.team__member p {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+/* Responsive Design for Different Screen Sizes */
+@media (max-width: 1400px) {
+  .teams__container {
+    grid-template-columns: repeat(4, 1fr); /* Four items per row */
+  }
+}
+
+@media (max-width: 1024px) {
+  .teams__container {
+    grid-template-columns: repeat(3, 1fr); /* Three items per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .teams__container {
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .teams__container {
+    grid-template-columns: 1fr; /* Stacks items on mobile */
+  }
+}

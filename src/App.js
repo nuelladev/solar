@@ -1,7 +1,10 @@
 import React from 'react';
 
-import { Footer, Blog, Possibility, Features, WhatGPT3, Header } from './containers';
-import { CTA, Brand, Navbar } from './components';
+import { Brand, CTA, Navbar } from './components';
+import Teams from './components/team/Teams'; // Import the Teams component
+
+// eslint-disable-next-line import/named
+import { Blog, Features, Footer, GreenWatt, Header, Possibility } from './containers';
 
 import './App.css';
 
@@ -12,7 +15,8 @@ const App = () => (
       <Header />
     </div>
     <Brand />
-    <WhatGPT3 />
+    <GreenWatt />
+    <Teams />
     <Features />
     <Possibility />
     <CTA />

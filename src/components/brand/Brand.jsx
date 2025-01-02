@@ -1,23 +1,25 @@
 import React from 'react';
-import { google, slack, atlassian, dropbox, shopify } from './imports';
+import { FaAward, FaBolt, FaLeaf, FaLightbulb, FaRegHandshake, FaTools } from 'react-icons/fa'; // Sample icons
 import './brand.css';
+
+const benefits = [
+  { text: 'Efficiency', icon: <FaBolt /> },
+  { text: 'Professionalism', icon: <FaRegHandshake /> },
+  { text: 'Innovation', icon: <FaLightbulb /> },
+  { text: 'Expertise', icon: <FaTools /> },
+  { text: 'Sustainability', icon: <FaLeaf /> },
+  { text: 'Excellence', icon: <FaAward /> },
+];
 
 const Brand = () => (
   <div className="gpt3__brand section__padding">
-    <div>
-      <img src={google} />
-    </div>
-    <div>
-      <img src={slack} />
-    </div>
-    <div>
-      <img src={atlassian} />
-    </div>
-    <div>
-      <img src={dropbox} />
-    </div>
-    <div>
-      <img src={shopify} />
+    <div className="gpt3__brand-marquee">
+      {benefits.map((benefit, index) => (
+        <div key={index} className="gpt3__brand-item">
+          <span className="icon">{benefit.icon}</span>
+          <span className="text">{benefit.text}</span>
+        </div>
+      ))}
     </div>
   </div>
 );

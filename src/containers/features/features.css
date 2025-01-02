@@ -21,6 +21,7 @@
     line-height: 45px;
     font-weight: 800;
     font-family: var(--font-family);
+    color: #ff8b01; /* Making the heading text color to match the service emphasis */
 }
 
 .gpt3__features-heading p {
@@ -41,6 +42,28 @@
     flex-direction: column;
 }
 
+.gpt3__features-container .feature {
+    margin-bottom: 2rem;
+}
+
+.gpt3__features-container .feature h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.gpt3__features-container .feature p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+.gradient__texts {
+    background: linear-gradient(to right, #ff8b01, #ff4820, #ff8b01, #ffff);
+    -webkit-background-clip: text;
+    background-clip: text; /* For non-webkit browsers */
+    color: transparent;
+  }
+  
 @media screen and (max-width: 990px) {
     .gpt3__features {
         flex-direction: column;
@@ -51,6 +74,7 @@
     }
 }
 
+  
 
 @media screen and (max-width: 550px) {
     .gpt3__features-heading h1 {

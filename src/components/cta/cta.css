@@ -3,17 +3,15 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-
     padding: 2rem;
     margin: 4rem;
     border-radius: 1rem;
-    background: var(--gradient-bar)
+    background: var(--gradient-bar);
 }
 
 .gpt3__cta-content {
     display: flex;
     flex-direction: column;
-
     text-align: left;
     color: #fff;
 }
@@ -32,15 +30,39 @@
     font-weight: 800;
 }
 
-.gpt3__cta-btn {
+.gpt3__cta-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
     margin-left: 2rem;
 }
 
-.gpt3__cta-btn button {
+.gpt3__cta-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.gpt3__cta-form input,
+.gpt3__cta-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-family: var(--font-family);
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.gpt3__cta-form input:focus,
+.gpt3__cta-form textarea:focus {
+    border-color: #ff8b01;
+}
+
+.gpt3__cta-form button {
     background: #000;
     color: #fff;
     font-family: var(--font-family);
@@ -49,11 +71,26 @@
     line-height: 30px;
     padding: 0.5rem 1rem;
     border-radius: 2rem;
-
     border: none;
     outline: none;
     cursor: pointer;
-    min-width: 150px;
+    transition: background-color 0.3s ease;
+}
+
+.gpt3__cta-form button:hover {
+    background: #ff8b01;
+}
+
+.success-message {
+    color: #4caf50;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: #f44336;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 650px) {
@@ -61,14 +98,13 @@
         flex-direction: column;
     }
 
-    .gpt3__cta-btn {
-        margin: 2rem 0 0;
+    .gpt3__cta-form {
+        margin-left: 0;
     }
 }
 
 @media screen and (max-width: 550px) {
     .gpt3__cta {
-        flex-direction: column;
         margin: 4rem 2rem;
     }
 
@@ -77,7 +113,7 @@
         line-height: 32px;
     }
 
-    .gpt3__cta-btn button {
+    .gpt3__cta-form button {
         font-size: 14px;
         line-height: 28px;
     }

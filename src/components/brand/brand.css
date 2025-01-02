@@ -1,17 +1,47 @@
 .gpt3__brand {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-
-.gpt3__brand div {
-    flex: 1;
-    max-width: 150px;
-    min-width: 120px;
-    margin: 1rem;
-
+    position: relative;
+    width: 100%;
+    height: 150px; /* Adjust height to fit the items */
+    overflow: hidden;
+  }
+  
+  .gpt3__brand-marquee {
     display: flex;
-    justify-content: center;
     align-items: center;
-}
+    animation: bounce 8s infinite alternate ease-in-out; /* Smooth left-right movement */
+    gap: 3rem; /* Space between items */
+  }
+  
+  .gpt3__brand-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--color-text); /* Adjust color as needed */
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .gpt3__brand-item .icon {
+    font-size: 2rem; /* Adjust icon size */
+    color: var(--color-primary); /* Adjust icon color */
+  }
+  
+  .gpt3__brand-item .text {
+    margin-top: 0.5rem;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(10%);
+    }
+  }
+  

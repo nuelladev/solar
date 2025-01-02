@@ -1,27 +1,34 @@
 import React from 'react';
+import ai from '../../assets/hero.jpg';
 import people from '../../assets/people.png';
-import ai from '../../assets/ai.png';
 import './header.css';
 
 const Header = () => (
   <div className="gpt3__header section__padding" id="home">
     <div className="gpt3__header-content">
-      <h1 className="gradient__text">Let&apos;s Build Something amazing with GPT-3 OpenAI</h1>
-      <p>Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>
+      <h1>
+        <span style={{ color: '#ff4820' }}>Powering</span>{' '}
+        <span style={{ color: '#ff8b01' }}>Sustainable</span>{' '}
+        <span style={{ color: '#ffffff' }}>Futures</span>
+      </h1>
+      <p>
+        From innovative solar designs to expert project management, we provide
+        comprehensive electrical solutions, consultancy, and training. Empower
+        your projects with professional installation, procurement, and the
+        latest in renewable technology.
+      </p>
 
-      <div className="gpt3__header-content__input">
-        <input type="email" placeholder="Your Email Address" />
-        <button type="button">Get Started</button>
-      </div>
+      {/* Colored line instead of the input section */}
+      <div className="gpt3__header-content__line" />
 
       <div className="gpt3__header-content__people">
-        <img src={people} />
-        <p>1,600 people requested access a visit in last 24 hours</p>
+        <img src={people} alt="People" />
+        <p>We&apos;ve worked with over 500 clients in the last 2 years</p>
       </div>
     </div>
 
     <div className="gpt3__header-image">
-      <img src={ai} />
+      <img src={ai} alt="AI Illustration" />
     </div>
   </div>
 );
